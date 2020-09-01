@@ -15,12 +15,9 @@ authToken = "12345678"
 def myCommandCallback(cmd):
         print("Command received: %s" % cmd.data)
         print(type(cmd.data))
-        i=cmd.data['command']
-        if i=='lighton':
-                print("light is on")
-        elif i=='lightoff':
-                print("light is off")
-
+        
+	
+	
 try:
         deviceOptions = {"org": organization, "type": deviceType, "id": deviceId, "auth-method": authMethod, "auth-token": authToken}
         deviceCli = ibmiotf.device.Client(deviceOptions)#.............................................
